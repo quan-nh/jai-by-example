@@ -1,1 +1,0 @@
-# jai-by-example
