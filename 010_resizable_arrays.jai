@@ -9,9 +9,9 @@ main :: () {
     array_add(*resizable, 9);
     array_add(*resizable, 16);
 
-    print("resizable.count == %\n", resizable.count);
+    print("resizable.count == %\n", resizable.count); // resizable.count == 4
     print("Elements of 'resizable' are:");
-    for resizable print(" %", it);
+    for resizable print(" %", it); // 1 4 9 16
     print("\n");
 
     // Resizable arrays automatically cast to array views, so you can easily pass them
@@ -23,6 +23,10 @@ main :: () {
     print("\n");
     print("Resizable:\n");
     f(resizable);  // Call f with the resizable array.
+    // array[0] is 1.
+    // array[1] is 4.
+    // array[2] is 9.
+    // array[3] is 16.
 
     // A resizable array is equivalent to the following data structure:
 
@@ -40,17 +44,5 @@ main :: () {
 
     print("\n");
     print("resizable.count == %; resizable.allocated == %.\n", resizable.count, resizable.allocated);
+    //     resizable.count == 4; resizable.allocated == 8.
 }
-
-/*
-resizable.count == 4
-Elements of 'resizable' are: 1 4 9 16
-
-Resizable:
-array[0] is 1.
-array[1] is 4.
-array[2] is 9.
-array[3] is 16.
-
-resizable.count == 4; resizable.allocated == 8.
-*/
