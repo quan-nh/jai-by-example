@@ -35,5 +35,5 @@ main :: () {
     // Joins and releases the thread's resources.
     thread_deinit(*thread);
 
-    print("Raw thread result: %\n", data.output);
+    print("Raw thread result: %\n", data.output); // Raw thread result: 42
 }
